@@ -2,5 +2,10 @@
 <p>Find me in app/views/home/index.html.erb</p>
 
 <% @posts.each do |post| %>
+  <%if post.description? %>
  <h2> <%= post.title %> </h2>
+    <%end %>
 <% end %>
+
+<% #criando um botão para ir até a pagina posts %>
+<%= link_to "Posts", posts_path %>
